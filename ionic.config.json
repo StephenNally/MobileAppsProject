@@ -1,0 +1,7 @@
+{
+  "name": "SaleSearch",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
