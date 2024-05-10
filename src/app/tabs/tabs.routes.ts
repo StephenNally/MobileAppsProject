@@ -9,7 +9,7 @@ export const routes: Routes = [
       {
         path: 'tab1',
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../tab1/weekly-top-sellers.page').then((m) => m.Tab1Page),
       },
       {
         path: 'tab2',
@@ -19,7 +19,12 @@ export const routes: Routes = [
       {
         path: 'tab3',
         loadComponent: () =>
-          import('../tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../Wishlist/tab3.page').then((m) => m.Tab3Page),
+      },
+      {
+        path: 'game',
+        loadComponent: () =>
+        import('../Game/tab1.page').then((m) => m.Tab1Page),
       },
       {
         path: '',

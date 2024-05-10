@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Game 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Game</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!--<ion-searchbar placeholder="Search game"></ion-searchbar>-->
+  <ion-searchbar [(ngModel)]="searchTerm" (keydown.enter)="searchEventFired()"></ion-searchbar>
+
+  <ion-card *ngFor="let game of games">
+    <!--<img src="{{movie.Poster}}"-->
+    <ion-card-header>
+    <ion-card-subtitle>{{game.name}}</ion-card-subtitle>
+    <ion-card-title>{{game.available}}</ion-card-title>
+    <ion-button (click)="addToWishlist(game)">Add to Wishlist</ion-button>
+    </ion-card-header>
+    </ion-card>
+    <!-- <ion-list> -->
+    <!-- <ion-item *ngFor="let movie of movieData">
+    <ion-item-group>
+    <img src="{{movie.Poster}}">
+    <ion-item-divider>
+    <ion-label>{{movie.Title}}</ion-label>
+    </ion-item-divider>
+    <ion-item-divider>
+    <ion-label>{{movie.Year}}</ion-label>
+    </ion-item-divider>
+    </ion-item-group>
+    </ion-item>
+    </ion-list> -->
+    
+</ion-content>

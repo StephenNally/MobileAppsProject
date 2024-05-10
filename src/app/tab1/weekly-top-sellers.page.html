@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Weekly Top Sellers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let game of games">
+      <ion-thumbnail slot="start">
+        <img [src]="game.header_image" alt="Game Thumbnail">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ game.name }}</h2>
+        <p>Sales: {{ game.sales }}</p>
+        <p>{{total}}</p>
+      </ion-label>
+    </ion-card>
+  </ion-list>
+</ion-content>

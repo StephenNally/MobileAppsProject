@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Wishlist
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Wishlist</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button [routerLink]="['../game']">Add new game to Wishlist </ion-button>
+ 
+  <ion-card *ngFor="let game of games">
+    <ion-card-header>
+    <ion-card-subtitle>{{game.name}}</ion-card-subtitle>
+    <ion-card-title>{{game.available}}</ion-card-title>
+    <ion-button (click)="removeFromWishlist({game})">Remove from Wishlist</ion-button>
+    </ion-card-header>
+    </ion-card>
+
+    <ion-button color="success" expand="block" (click)="saveStatus()">Save Wishlist</ion-button>
+  
+</ion-content>
