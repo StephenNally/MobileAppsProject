@@ -20,8 +20,11 @@
   <ion-card *ngFor="let game of games">
     <!--<img src="{{movie.Poster}}"-->
     <ion-card-header>
-    <ion-card-subtitle>{{game.name}}</ion-card-subtitle>
-    <ion-card-title>{{game.available}}</ion-card-title>
+      <ion-card-subtitle>{{game.name}}</ion-card-subtitle>
+      <img src="{{game.tiny_image}}" />
+      <ion-card-subtitle>Metascore: {{game.metascore}}/100</ion-card-subtitle>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>{{ game.price.currency }} {{ (game.price.initial / 100).toFixed(2) }}</ion-card-title>
     <ion-button (click)="addToWishlist(game)">Add to Wishlist</ion-button>
     </ion-card-header>
     </ion-card>
